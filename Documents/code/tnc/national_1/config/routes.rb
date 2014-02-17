@@ -1,4 +1,12 @@
 National1::Application.routes.draw do
+
+  # get "sessions/create"
+
+  resources :inicio
+
+  get '/auth/:provider/callback', to: 'sessions#create'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -11,7 +19,8 @@ National1::Application.routes.draw do
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  # resources :inicio
+
 
   # Sample resource route with options:
   #   resources :products do
@@ -48,7 +57,7 @@ National1::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  # root :to => 'inicio#index'
 
   # See how all your routes lay out with "rake routes"
 
