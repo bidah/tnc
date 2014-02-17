@@ -1,5 +1,14 @@
-<p>esto es inicio</p>
+<h3 style='text-transform: uppercase'>esto es inicio</h3 style='text-transform: uppercase'>
 
 <p>
-  <%= link_to "login Twitter",  "auth/twitter" %>
+
+  <% if current_user %>
+    welcome <%= current_user.name %>
+  <% else %>
+    <p>
+      <%= link_to "login Twitter",  "auth/twitter" %>
+    </p>
+  <% end %>
+
 </p>
+
