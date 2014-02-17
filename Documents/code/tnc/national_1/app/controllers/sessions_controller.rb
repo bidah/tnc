@@ -10,6 +10,11 @@ class SessionsController < ApplicationController
     redirect_to :inicio_index , notice: 'signed in'
   end
 
+  def destroy
+    session[:user_id] = nil
+    redirect_to :inicio_index , notice: 'signed out'
+  end
+
 
   # def create
   #   @user = User.find_or_create_from_auth_hash(auth_hash)

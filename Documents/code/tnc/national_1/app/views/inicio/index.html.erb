@@ -1,9 +1,17 @@
 <h3 style='text-transform: uppercase'>esto es inicio</h3 style='text-transform: uppercase'>
 
+<% if flash[:error] -%>
+  <p class='error'><%=h flash[:error] %></p>
+<% end -%>
+<% if flash[:notice] -%>
+  <p class='notice'><%=h flash[:notice] %></p>
+<% end -%>
+
 <p>
 
   <% if current_user %>
     welcome <%= current_user.name %>
+    <%= link_to "logout", signout_path %>
   <% else %>
     <p>
       <%= link_to "login Twitter",  "auth/twitter" %>
