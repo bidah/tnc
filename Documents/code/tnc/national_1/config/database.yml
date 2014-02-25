@@ -24,15 +24,7 @@
   #   pool: 5
   #   timeout: 5000
 
-  development:
-  adapter: postgresql
-  encoding: unicode
-  database: tnc_firmas
-  pool: 5
-  username: bartoindahouse
-  password:
-
-test:
+development:
   adapter: postgresql
   encoding: unicode
   database: tnc_firmas
